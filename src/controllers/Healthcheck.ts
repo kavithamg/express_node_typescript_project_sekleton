@@ -1,7 +1,8 @@
 import {Request, Response} from 'express';
 import {controller, httpGet} from 'inversify-express-utils';
+import Constants from '../constants/Constants';
 
-@controller('/healthcheck')
+@controller(`${Constants.CONTEXTPATH}/healthcheck`)
 export class HealthcheckController {
 
     @httpGet('/')
